@@ -27,3 +27,9 @@ $dados = array(1,2,3,4);
 foreach ($dados as $valor){
     echo $valor;
 }
+
+function votar($cod){
+    echo "Votei na sugestão $cod";
+}
+
+votar(20);
