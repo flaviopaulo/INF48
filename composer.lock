@@ -4,8 +4,54 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "25d9fd494b142674b3db80bee191a86f",
+    "hash": "bdecd2333942782cddaf38206ec81a6c",
     "packages": [
+        {
+            "name": "psr/http-message",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "98ef8f215a7b86af3fd35b98b98bc79c15057f65"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/98ef8f215a7b86af3fd35b98b98bc79c15057f65",
+                "reference": "98ef8f215a7b86af3fd35b98b98bc79c15057f65",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2014-07-10 17:31:27"
+        },
         {
             "name": "psr/log",
             "version": "dev-master",
@@ -58,7 +104,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "psr/log": 20
+        "psr/log": 20,
+        "psr/http-message": 20
     },
     "prefer-stable": false,
     "platform": {
