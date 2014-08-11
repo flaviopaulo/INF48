@@ -1,9 +1,9 @@
-<?php    
-require_once './Aluno.php';
-$aluno1 = new Aluno();
-$aluno1->setCpf(123456);
-$aluno1->setMail("aluno@escola.com");
-$aluno1->setSenha('123');
-$aluno1->setNome('Fulano de Tall');
+<?php
+use Fabrica\Carro as Car;
+require_once 'Fabrica/Carro.php';
+require_once 'Vendas/Carro.php';
 
-echo "Senha ".$aluno1->getSenha();
+$carroFab = new Fabrica\Carro();
+$carroVen = new Vendas\Carro();
+$carr = new car();
+$obj = new \stdClass();
