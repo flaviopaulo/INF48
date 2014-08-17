@@ -4,5 +4,4 @@ class Aluno extends Pessoa{
     public function trabalhar() {
         echo "Trabalhando";
     }
-
 }

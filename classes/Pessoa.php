@@ -5,6 +5,20 @@ abstract class Pessoa{
     private $cpf;   //Somente a classe Pessoa
     private $senha;
 
+    /**
+     * Método construtor da classe
+     * @param $nome
+     * @param $email
+     * @param $cpf
+     * @param $senha
+     */
+    public function __construct($nome,$email,$cpf,$senha)
+    {
+        $this->nome = $nome;
+        $this->mail = $email;
+        $this->cpf = $cpf;
+        $this->senha = $senha;
+    }
 
     //Encapsulamento
     public function setCpf($cpf)
