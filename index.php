@@ -1,9 +1,35 @@
-<?php    
-require_once './Aluno.php';
-$aluno1 = new Aluno();
-$aluno1->setCpf(123456);
-$aluno1->setMail("aluno@escola.com");
-$aluno1->setSenha('123');
-$aluno1->setNome('Fulano de Tall');
+<?php
+header('Content-type: text/html;charset=utf-8');
+use Metropolitana\AtributoDinamico;
+use Metropolitana\MetodoDinamico;
 
-echo "Senha ".$aluno1->getSenha();
+include_once './library/Metropolitana/AtributoDinamico.php';
+include_once './library/Metropolitana/MetodoDinamico.php';
+
+//instância
+$propriedade = new AtributoDinamico(null);
+$metodo = new MetodoDinamico();
+//variaveis
+$codigo = 1;
+$nome = 'Pedro';
+$telefone = '22119954';
+$email = 'pedro@lol.com';
+//métodos mágicos {__set}
+$propriedade->codigo=$codigo;
+$propriedade->nome=$nome;
+$propriedade->telefone=$telefone;
+$propriedade->email=$email;
+echo "{$propriedade->nome} {$propriedade->telefone} {$propriedade->email}<br>";
+
+
+//métodos mágicos {__set}
+$metodo->setCodigo($codigo);
+$metodo->setNome($nome);
+echo "{$metodo->getCodigo()} {$metodo->getNome()}<br>";
+//métodos mágicos __calStatic
+MetodoDinamico::setLocal('Brasil');
+MetodoDinamico::setCidade('Marabá');
+echo MetodoDinamico::getLocal();
+echo "<br>";
+echo MetodoDinamico::getCidade();
+
