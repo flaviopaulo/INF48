@@ -4,7 +4,9 @@ use Metropolitana\AtributoDinamico;
 use Metropolitana\MetodoDinamico;
 use Metropolitana\Db\PdoMysql;
 include_once '../library/Autoloader.php';
-$loader = new Autoloader();
+include_once '../library/SplClassLoader.php';
+$loader = new SplClassLoader();
+$loader->register();
 //instância
 $propriedade = new AtributoDinamico(null);
 $db = new PdoMysql;
