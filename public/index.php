@@ -2,10 +2,12 @@
 header('Content-type: text/html;charset=utf-8');
 use Metropolitana\AtributoDinamico;
 use Metropolitana\MetodoDinamico;
-
+use Metropolitana\Db;
+include_once '../library/Autoloader.php';
+$loader = new Autoloader();
 //instância
 $propriedade = new AtributoDinamico(null);
-
+$db = new Db\Pdo;
 $metodo = new MetodoDinamico();
 //variaveis
 $codigo = 1;
